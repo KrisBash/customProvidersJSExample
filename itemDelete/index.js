@@ -32,9 +32,15 @@ async function deleteItem(req){
 
 async function authenticate(clientCert){
     return new Promise((resolve, reject) => {
-        var metadataUri = "https://www.google.com"
+        var authenticated = false;
+        var metadataUri = "https://management.azure.com:24582/metadata/authentication?api-version=2015-01-01"
         request(metadataUri, { json: true }, (err, res, body) => {
             if (err) { reject(err) };
+            var certs = body.clientCertificates;
+            //certs = body.clientCertificates;
+           /* for (i = 0; i < certs.length; i++) {
+                console.log(certs[i].thumbprint);
+             }*/
             resolve(body);
         });
     });
