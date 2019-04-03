@@ -5,8 +5,8 @@ md = require('node-forge').md;
 
 const reqAuthorization = true; //set to false for http testing
 const authorizedSubscriptions  = [
-    "e4bba604-704b-4f34-9a46-dc1b35e5794c",
-    "0a938bc2-0bb8-4688-bd37-9964427fe0b0"
+    "f5319171-ae72-4aff-a1ef-77bb2a2658d7",
+    "f58167cd-7be6-4657-b3cb-794be1816cdb"
 ]  //resourceId must be in one of these subscriptions for authorization
 
 async function getThumbprints(context){
